@@ -33,22 +33,23 @@
             <h1 class="fw-lighter text-light name">
                 <b class="fw-normal ff-bell fs-large">OLIVIA SCALORA</b>
             </h1>
-            <p class="lead text-white-50"></p>
             <div class="p5" id="p5">
-                <h6 class="h6 fw-lighter text-light name">
-                  <b>SPATIAL DATA ANALYST   |  DESIGNER</b>
-                </h6>
-                <div class="p5" id="p5">
-                    <h6 class="h6 fw-lighter text-light name mt-4"> oliviascalora@gmail.com </h6>
-                    <h6 class="h6 fw-lighter text-light name mt-1"> Philadelphia, PA</h6>
+                <button class="h6 fw-lighter text-light name collapsible"><b>SPATIAL DATA ANALYST   |  DESIGNER</b></button>
+                <div class="content">
+                    <p class="h6 fw-lighter text-light name mt-4"> about about about about about about
+                    </p>
+                  <div class="p5" id="p5">
+                      <h6 class="h6 fw-lighter text-light name mt-4"> oliviascalora@gmail.com </h6>
+                      <h6 class="h6 fw-lighter text-light name mt-1"> Philadelphia, PA</h6>
+                  </div>
+                      <p class="text-muted text-white-50 fs-3 m-auto">
+                          <a href="Resume.html" class="text-reset px-1" target="_blank"><i class="fas fa-clipboard-list"></i></a>
+                          <a href="mailto:oliviascalora@gmail.com" class="text-reset px-1" target="_blank"> <i class="fas fa-envelope"></i></a>
+                          <a href="https://www.linkedin.com/in/olivia-scalora/" class="text-reset px-1" target="_blank"> <i
+                                  class="fab fa-linkedin"></i></a>
+                          <a href="https://github.com/OliviaScalora" class="text-reset px-1" target="_blank"> <i class="fab fa-github-square"></i></a>
+                      </p>
                 </div>
-                <p class="text-muted text-white-50 fs-3 m-auto">
-                    <a href="Resume.html" class="text-reset px-1" target="_blank"><i class="fas fa-clipboard-list"></i></a>
-                    <a href="mailto:oliviascalora@gmail.com" class="text-reset px-1" target="_blank"> <i class="fas fa-envelope"></i></a>
-                    <a href="https://www.linkedin.com/in/olivia-scalora/" class="text-reset px-1" target="_blank"> <i
-                            class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/OliviaScalora" class="text-reset px-1" target="_blank"> <i class="fab fa-github-square"></i></a>
-                </p>
             </div>
         </div>
     </section>
@@ -115,7 +116,7 @@
                         <img src="images\Recid_cover.PNG">
                         <div class="card-body">
                             <h6>Memo to the Mayor | Reducing Recidivism Through Fair Algorithms</h6>
-                            <p>  
+                            <p>
                                 <br>
                                 <u id='link-509'><i class="fab fa-github"></i> Github Repo</u>
                                 <br>
@@ -167,10 +168,10 @@
 
     <footer>
         <p class="text-muted text-white-50 fs-3 contacts">
-            <a href="mailto:oscalora@design.upenn.edu" class="text-reset px-1"> <i class="fas fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/olivia-scalora/" class="text-reset px-1"> <i
+            <a href="mailto:oscalora@design.upenn.edu" class="text-reset px-1"> <i class="fas fa-envelope" target="_blank"></i></a>
+            <a href="https://www.linkedin.com/in/olivia-scalora/" class="text-reset px-1" target="_blank"> <i
                     class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/OliviaScalora" class="text-reset px-1"> <i class="fab fa-github-square"></i></a>
+            <a href="https://github.com/OliviaScalora" class="text-reset px-1"> <i class="fab fa-github-square" target="_blank"></i></a>
         </p>
         <p class="text-muted text-white-50">© OliviaScalora. All rights reserved.</p>
     </footer>
@@ -189,6 +190,22 @@
 
     <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.min.js"></script>
     <script src="./res/partical.js"></script>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+          });
+        }
+    </script>
 </body>
 
 </html>

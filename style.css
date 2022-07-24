@@ -780,7 +780,7 @@ progress {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
-  width: 16.66667%;
+width: 16.66667%;  E3
 }
 
 .col-3 {
@@ -8688,7 +8688,7 @@ fieldset:disabled .btn {
 }
 
 .fc-oliv {
-  color: #848469 !important;
+  color: #5b5c49 !important;
 }
 
 .fw-light, .card > div > p {
@@ -11990,7 +11990,7 @@ nav {
 }
 
 body section {
-  height: 80vh;
+  height: 30vh;
   background-color: #848469;
 }
 
@@ -12089,6 +12089,34 @@ a:hover {
 /* Dotted border */
 hr.dotted {
   border-top: 3px dotted #bbb;
+}
+
+/*Collapsible*/
+
+.collapsible {
+  background-color: #848469;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #5b5c49;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #848469;
+  color: white;
+  font-size: 1vw;
 }
 
 
